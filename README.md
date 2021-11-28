@@ -9,7 +9,7 @@ For example:<br>
 
 This will iteratively search through the target directory and every sub-directory. The script keeps track of any duplicate files found, which are then reported at the end in a file named *report.txt* which is generated in the same folder that the script is executed in.
 
-NOTE: This script was tested on a Pictures folder containing ~47,000 files at a size of 190GB. Stability cannot be guaranteed, especially when testing on folders with large contents.
+NOTE: This script was tested on a Pictures folder containing ~47,000 files at a size of 190GB. Execution on an SSD and mid-tier Ryzen CPU took ~100 seconds. Stability cannot be guaranteed, especially when testing on folders with large contents.
 
 # How It Works
 1. The script accepts a target directory which will act as the root directory for searching.
