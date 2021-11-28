@@ -47,6 +47,8 @@ duplicate_records = {}
 if len(sys.argv) != 2:
     raise ValueError('Please provide a single target directory path to search through.')
 root_path = pathlib.Path(sys.argv[1])
+if not root_path.exists() or not root_path.is_dir():
+  raise ValueError("The provided value for a target directory cannot be verified to be a valid directory.")
 
 ### Start timer
 start = time.time()
