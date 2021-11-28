@@ -54,12 +54,13 @@ if not root_path.exists() or not root_path.is_dir():
 start = time.time()
 
 ### Add each file to unsorted list
+print("Searching target directory and sub-directories for files, this may take some time...")
 for file in root_path.rglob('*'):
   if file.is_file():
     file_record = FileRecord(str(file.resolve()), file.stat().st_size, None)
     unsorted_records.append(file_record)
 unsorted_record_length = len(unsorted_records)
-print(f"{unsorted_record_length} records found. Now searching for duplicates.")
+print(f"{unsorted_record_length} records found. Now searching for duplicates...")
 
 ### Loop through collected file records and compare with similar size records to find duplicates
 time_counter = time.localtime().tm_sec
